@@ -1,0 +1,12 @@
+/* Portfolio Pages */
+
+section.portfolio-page img { /* Limits styling to only sections given the class "portfolio page" */
+  display: block; /* Forces a line break between each image */
+  padding: 10px; /* White space around the image */
+}
+
+@media (min-width: 600px) { /* Limits styling to tablets and desktops only */
+  .fixed-div {
+    position: fixed!important; /* Makes portfolio text stay fixed while images scroll */
+  }
+}
