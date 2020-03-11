@@ -12,9 +12,47 @@ section.portfolio-page img { /* Limits styling to only sections given the class 
   }
 }
 
-@media (min-width: 600px) { /* Limits styling to large screens */
+@media (min-width: 900px) { /* Limits styling to large screens */
   .fixed-div {
     position: fixed!important; /* Makes portfolio text stay fixed while images scroll */
     max-width: 30%;
   }
+}
+
+
+.masthead {
+  min-height: 45rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 10vh;
+}
+}
+
+.bg-primary {
+  background-color: #114c5f!important;
+}
+
+.service-icon {
+  color: #114c5f;
+}
+
+.portfolio-item .caption {
+  background-color: rgba(19,22,24,.6);
+}
+
+.portfolio-item .caption .caption-content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.portfolio-item .caption .caption-content h2 {
+  font-size: 1.1rem;
+}
+
+.portfolio-item .caption .caption-content {
+  margin-bottom: 3rem;
 }
