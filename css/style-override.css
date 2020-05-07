@@ -3,58 +3,16 @@
 .headerdescription {
   font-weight: 400; 
   line-height: 140%; 
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 
-/* Portfolio Pages */
-
-section.portfolio-page img { /* Limits styling to only sections given the class "portfolio page" */
-  display: block; /* Forces a line break between each image */
-  padding: 10px; /* White space around the image */
+.parent-masthead {
+  height: 10rem;
 }
 
-@media (min-width: 600px) { /* Limits styling to tablets and desktops only */
-  .fixed-div {
-    position: fixed!important; /* Makes portfolio text stay fixed while images scroll */
-    max-width: 40%;
-  }
-}
-
-@media (min-width: 900px) { /* Limits styling to large screens */
-  .fixed-div {
-    position: fixed!important; /*Makes portfolio text stay fixed while images scroll */
-    max-width: 45%;
-    text-align: left;
-  }
-
-.masthead {
-  min-height: 45rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-section.portfolio-page h1 {
-  background-color: goldenrod;
-  width: 300%;
-  padding-bottom: 1em;
-  padding-top: 1em; 
-  padding-left: 1.4em;
-  text-align: left;
-  margin: 0;
-}
-
-section.portfolio-page p {
-  padding-left: 3.5em;
-}
-
-#firstp{
-  padding-top: 3em;
-}
-
-@media (min-width: 992px) {
-  .masthead {
-    height: 10vh;
-}
+.masthead{
+  padding-bottom: 25rem;
 }
 
 .bg-primary {
@@ -80,4 +38,122 @@ section.portfolio-page p {
 
 .portfolio-item .caption .caption-content {
   margin-bottom: 3rem;
+}
+
+
+
+
+
+/* Portfolio Pages */
+
+section.portfolio-page img { /* Limits styling to only sections given the class "portfolio page" */
+  display: block; /* Forces a line break between each image */
+  padding: 10px; /* White space around the image */
+  margin: 0;
+}
+
+@media (min-width: 600px) { /* Limits styling to tablets and desktops only */
+  .fixed-div {
+    position: sticky!important; /* Makes portfolio text stay fixed while images scroll */
+  }
+}
+
+@media (min-width: 900px) { /* Limits styling to large screens */
+  .fixed-div {
+    position: sticky!important; /*Makes portfolio text stay fixed while images scroll */
+    max-width: 55%;
+    text-align: left;
+  }
+
+/* Header */
+
+.col-sm-12 {
+  margin:0;
+  padding:0;
+}
+
+.masthead-child {
+  padding-top: 3rem;
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 0;
+}
+
+.color-bar {
+  height: 9em;
+  margin-bottom: 1em; 
+  margin-left: 0;
+  padding-left: 0;
+  width: 50%;
+}
+
+section.portfolio-page h1 {
+  padding-bottom: 1em;
+  padding-top: 1.5em; 
+  padding-left: 1.7em;
+  padding-right: 0;
+  text-align: left;
+  margin: 0;
+  background-color: turquoise;
+}
+
+/*Sticky stuff*/
+
+.stickytitle
+.stickytext
+.stickyfooter{
+  position: sticky;
+}
+
+.stickytitle{
+  top: 0;
+}
+
+.stickytext{
+  top: 0px;
+}
+
+.stickyfooter{
+  top: 0;
+}
+
+/* Body text*/
+
+section.portfolio-page p {
+  padding-left: 4em;
+  width: 85%;
+  text-justify: left;
+}
+
+section.portfolio-page .fixed-div > p:first-child{
+  padding-top: 9.3em;
+  padding-bottom: 0.8em;
+  padding-left: 2.7em;
+  font-size: 1.5em; 
+  margin: 0;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 10vh;
+}
+
+/*Footer*/
+
+section.portfoliopage > .footer {
+  margin-top: 1em;
+}
+
+#footerchild {
+  margin-top: 4em;
+  margin-bottom: 0;
+}
+
+#footerparent {
+  margin-top: 2em;
+  margin-bottom:2em;
 }

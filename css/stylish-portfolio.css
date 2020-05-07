@@ -86,13 +86,11 @@ h6 {
 }
 
 .masthead {
-  min-height: 30rem;
+  min-height: 40rem;
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
   padding-top: 8rem;
-  padding-bottom: 8rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -270,12 +268,14 @@ h6 {
     -webkit-clip-path: inset(0px);
     clip-path: inset(0px);
   }
+  
   .portfolio-item .caption .caption-content {
     transition: opacity 0.25s;
     margin-left: 5rem;
     margin-right: 5rem;
     margin-bottom: 5rem;
   }
+  
   .portfolio-item img {
     -webkit-transition: -webkit-clip-path 0.25s ease-out;
     -webkit-clip-path: inset(-1px);
