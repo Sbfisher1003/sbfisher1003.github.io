@@ -9,11 +9,23 @@
 }
 
 .parent-masthead {
-  height: 10rem;
+  height: 15rem;
 }
 
 .masthead{
   padding-bottom: 25rem;
+}
+
+header h4 {
+  margin-bottom:-0.5em;
+}
+
+h5 {
+  margin: 0;
+}
+
+h5{
+  margin:0;
 }
 
 .bg-primary {
@@ -63,12 +75,27 @@ section.portfolio-page img:first-child { /* Limits styling to only sections give
   }
 }
 
-@media (min-width: 900px) { /* Limits styling to large screens */
+@media { /* Limits styling to large screens */
   .sticky-div {
     position: sticky!important; /*Makes portfolio text stay fixed while images scroll */
     text-align: left;
     top: 0;
   }
+
+  @media (min-width: 900px) { /* Limits styling to large screens */
+    section.portfolio-page > p:first-child {
+      margin-top: 
+    }
+    #rightmargin {
+      margin-right: 10px; /*for marketing-research button in header*/
+    }
+    .parent-masthead {
+      height: 20rem;
+    }
+    .masthead{
+      padding-bottom: 28rem;
+    }
+    }
 
 /* Header */
 
@@ -105,6 +132,7 @@ section.portfolio-page h1 {
 
 .stickytitle{
   top: 0;
+  background-color: white; /*makes text disappear after scrolling under title*/
 }
 
 .stickytext{
@@ -143,8 +171,55 @@ section.portfolio-page .sticky-div > p:first-child{
 
 /*Footer*/
 
-#childfooter{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: 0.4rem;
+.color-bar-footer{
+  background-color: turquoise;
+  margin-top: 4em;
+  margin-left: 0em;
+  margin-right:0;
+  padding-right: 0px;
+  padding-top: 2em;
+  padding-bottom: 0.8em;
+}
+
+footer .no-gutters{
+  margin-left: 2.7em;
+}
+
+footer .col-lg-2{
+  margin-left: 1em;
+  height: 10rem;
+}
+/* Added this at the end: makes portfolio items as tall as buttons, but photos no longer fit well
+footer .col-lg-2 .portfolio-item{
+  height: 8.7rem;
+}*/
+
+footer .portfolio-item .caption .caption-content {
+  color: #fff;
+  margin: auto 2rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+footer .portfolio-item .caption .caption-content h5 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+footer .btn{
+  display: block;
+  margin-right: 1em;
+  margin-left: auto;
+  text-transform: uppercase;
+  padding: 1rem 1rem;
+}
+
+footer .offset-lg-4{
+  margin-left: auto;
+  margin-right: 3em;
+}
+
+footer p {
+  color: white!important; /*change after color scheme determined*/
+  margin-bottom: 0;
 }
