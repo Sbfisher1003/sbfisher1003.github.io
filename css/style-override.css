@@ -12,20 +12,17 @@
   height: 15rem;
 }
 
-.masthead{
+.masthead {
   padding-bottom: 25rem;
 }
 
 header h4 {
-  margin-bottom:-0.5em;
+  margin-bottom: 2em;
+  line-height: 1.5em;
 }
 
 h5 {
   margin: 0;
-}
-
-h5{
-  margin:0;
 }
 
 .bg-primary {
@@ -37,7 +34,11 @@ h5{
 }
 
 .portfolio-item .caption {
-  background-color: rgba(19,22,24,.6);
+  image-resolution: 72px;
+}
+
+.portfolio-item .caption {
+  background-color: rgba(19,22,24,0.6);
 }
 
 .portfolio-item .caption .caption-content p {
@@ -51,6 +52,20 @@ h5{
 
 .portfolio-item .caption .caption-content {
   margin-bottom: 3rem;
+  margin-left: 4rem;
+}
+
+.parent-page footer .container p {
+  margin-bottom: 0em;
+}
+
+@media (min-width: 900px) {
+  #lovedata {
+    margin-right: 2rem;
+  }
+  .parent-page footer .container p {
+  margin-bottom: -4em;
+  }
 }
 
 /* Portfolio Pages */
@@ -70,43 +85,44 @@ section.portfolio-page img:first-child { /* Limits styling to only sections give
     position: sticky!important; /* Makes portfolio text stay fixed while images scroll */
     top: 0;
   }
-  section.color-bar h1 {
-    
-  }
 }
 
-@media { /* Limits styling to large screens */
+@media (min-width: 900px) {  /* Limits styling to large screens */
   .sticky-div {
     position: sticky!important; /*Makes portfolio text stay fixed while images scroll */
     text-align: left;
     top: 0;
   }
+} 
 
-  @media (min-width: 900px) { /* Limits styling to large screens */
-    section.portfolio-page > p:first-child {
-      margin-top: 
-    }
-    #rightmargin {
-      margin-right: 10px; /*for marketing-research button in header*/
-    }
-    .parent-masthead {
-      height: 20rem;
-    }
-    .masthead{
-      padding-bottom: 28rem;
-    }
-    }
+@media (min-width: 900px) { /* Limits styling to large screens */
+  #rightmargin {
+    margin-right: 10px; /*for marketing-research button in header*/
+  }
+  .parent-masthead {
+    height: 20rem;
+  }
+  .masthead {
+    padding-bottom: 28rem;
+  }
+}
 
 /* Header */
 
-.col-sm-6 {
+@media (min-width: 500px) { /* Limits styling to large screens */
+  .color-bar {
+    margin-bottom: 1em!important; 
+  }
+}
+
+.col-sm-6 { /*test this out/possibly delete*/
   margin:0;
   padding:0;
 }
 
 .color-bar {
   height: 9em;
-  margin-bottom: 1em; 
+  margin-bottom: 8em; 
   padding-left: 0;
   padding-top: 3rem;
   z-index: 5;
@@ -126,20 +142,20 @@ section.portfolio-page h1 {
 
 .stickytitle
 .stickytext
-.stickyfooter{
+.stickyfooter {
   position: sticky;
 }
 
-.stickytitle{
+.stickytitle {
   top: 0;
   background-color: white; /*makes text disappear after scrolling under title*/
 }
 
-.stickytext{
+.stickytext {
   top: 230px;
 }
 
-.stickyfooter{
+.stickyfooter {
   top: 0;
   margin-top: 5em;
 }
@@ -152,7 +168,7 @@ section.portfolio-page p {
   text-justify: left;
 }
 
-section.portfolio-page .sticky-div > p:first-child{
+section.portfolio-page .sticky-div > p:first-child {
   padding-bottom: 0.8em;
   padding-left: 2.7em;
   font-size: 1.5em; 
@@ -160,18 +176,87 @@ section.portfolio-page .sticky-div > p:first-child{
   width: 90%;
 }
 
-.bold{
+.bold {
   font-weight: 700;
 }
 
 @media (min-width: 992px) {
   .masthead {
     height: 10vh;
+  }
 }
 
 /*Footer*/
 
-.color-bar-footer{
+.offset-lg-4 { /*margin of buttons*/
+  margin-top: 1.3em;
+  margin-bottom: 1.1em;
+}
+
+footer p { /*bottom margin of circa text*/
+  margin-bottom: 5em;
+}
+
+.portfolio-item .caption .caption-content h5 { /*thumbnail text*/
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+.portfolio-page .btn { /*button*/
+  display: block;
+  text-transform: uppercase;
+  padding: 0.8rem 0.8rem;
+  width: 14em;
+  height: 35%;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.col-lg-2 { /*thumbnail margins*/
+  margin-top: 1em;
+}
+
+@media (min-width: 900px) { /*for footer thumbnails, text, buttons*/
+  .offset-lg-4 { /*margin of buttons*/
+    margin-bottom: 0;
+  }
+  footer .col-lg-2 { /*maintains margin between thumbnails*/
+    margin-left: 1em;
+    height: 10rem;
+  }
+  footer .no-gutters { /*left margin for thumbnails*/
+    margin-left: 2.7em;
+  }
+  .col-lg-2 { /*thumbnail margins*/
+    margin-top: 0;
+  }
+  .offset-lg-4 { /*top margin of buttons*/
+    margin-top: 0.5em;;
+  }
+  .portfolio-page .btn { /*buttons*/
+    width: 100%;
+    height: 30%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 7em;
+    margin-bottom: 0.7em!important;
+  }
+  .portfolio-item .caption .caption-content h5 { /*thumbnail text*/
+    font-size: 1.1rem;
+    margin-bottom: 0.4em;
+    margin-left: 0.3em;
+  }
+  .portfolio-page .btn .caption .caption-content { /*button text*/
+    font-size: 3rem;
+  }
+  .portfolio-page footer p { /*bottom margin of circa text*/
+    margin-bottom: 0em;
+  }
+}
+
+.color-bar-footer {
   background-color: turquoise;
   margin-top: 4em;
   margin-left: 0em;
@@ -181,45 +266,8 @@ section.portfolio-page .sticky-div > p:first-child{
   padding-bottom: 0.8em;
 }
 
-footer .no-gutters{
-  margin-left: 2.7em;
-}
-
-footer .col-lg-2{
-  margin-left: 1em;
-  height: 10rem;
-}
-/* Added this at the end: makes portfolio items as tall as buttons, but photos no longer fit well
-footer .col-lg-2 .portfolio-item{
-  height: 8.7rem;
-}*/
-
-footer .portfolio-item .caption .caption-content {
+.portfolio-page footer .portfolio-item .caption .caption-content { /*circa text*/
   color: #fff;
   margin: auto 2rem 2rem;
   margin-bottom: 1.5rem;
-}
-
-footer .portfolio-item .caption .caption-content h5 {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-footer .btn{
-  display: block;
-  margin-right: 1em;
-  margin-left: auto;
-  text-transform: uppercase;
-  padding: 1rem 1rem;
-}
-
-footer .offset-lg-4{
-  margin-left: auto;
-  margin-right: 3em;
-}
-
-footer p {
-  color: white!important; /*change after color scheme determined*/
-  margin-bottom: 0;
 }
