@@ -1,13 +1,12 @@
 
 /* Parent Page*/
 
-.masthead {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Header.jpg");
+.masthead { /* MQ */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Header_Mobile.jpg");
   background-position: center;
   background-size: contain;
 }
 
-header h4,
 .masthead h1 {
   font-weight: 400;
   -webkit-text-fill-color: white;
@@ -16,20 +15,25 @@ header h4,
 }
 
 .parent-masthead { /* MQ */
-  height: 15rem
+  height: 32rem
 }
 
 .masthead { /* MQ */
-  padding-bottom: 25rem;
+  padding-bottom: 5rem;
 }
 
-.masthead h1 {
+.masthead h1 { /* MQ */
   text-transform: uppercase;
+  margin-top: -1.5em;
+  line-height: 1em;
 }
 
-header h4 {
-  margin-bottom: 2em;
+header h4 { /* MQ */
+  margin-top: 6em;
+  margin-bottom: 1.1em;
   line-height: 1.5em;
+  color: #343a40;
+  font-weight: 400;
 }
 
 /* for the extra phrases that have been commented out of html
@@ -74,10 +78,11 @@ h5 {
   margin-left: 4rem;
 }
 
-footer.footer {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/footer.jpg");
+footer.footer { /* MQ */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Footer_Mobile.jpg");
   background-position: center;
   background-size: contain;
+  height: 38em;
 }
 
 footer .content-section h2 { /* Footer headline */
@@ -86,10 +91,25 @@ footer .content-section h2 { /* Footer headline */
 
 .parent-page footer .container p { /* MQ */
   margin-bottom: 0em;
+  margin-top: 5em;
   color: dimgray;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
+  .masthead { /* Horizontal photo */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Header.jpg");
+    background-position: center;
+    background-size: contain;
+  }
+  .masthead h1 {
+    margin-top: 0em;
+  }
+  header h4 {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color: white;
+    font-weight: 500;
+  }
   #lovedata { /* So that love-data text doesn't overlap buttons in thumbnail image */
     margin-right: 2rem;
   }
@@ -114,6 +134,16 @@ footer .content-section h2 { /* Footer headline */
   .masthead {
     padding-bottom: 10rem;
   } 
+  footer.footer {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/footer.jpg");
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+  }
+  .parent-page footer .container p {
+    margin-top: 1.7em;
+    color: dimgray;
+  }
 }
 
 /* Portfolio Pages, General */
