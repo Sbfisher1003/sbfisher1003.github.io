@@ -1,19 +1,30 @@
 
 /* Parent Page*/
 
-.headerdescription {
-  font-weight: 400; 
-  line-height: 140%; 
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-
-.parent-masthead {
-  height: 15rem;
-}
-
 .masthead {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Header.jpg");
+  background-position: center;
+  background-size: contain;
+}
+
+header h4,
+.masthead h1 {
+  font-weight: 400;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.parent-masthead { /* MQ */
+  height: 15rem
+}
+
+.masthead { /* MQ */
   padding-bottom: 25rem;
+}
+
+.masthead h1 {
+  text-transform: uppercase;
 }
 
 header h4 {
@@ -21,12 +32,20 @@ header h4 {
   line-height: 1.5em;
 }
 
-h5 {
-  margin: 0;
+/* for the extra phrases that have been commented out of html
+.headerdescription {
+  font-weight: 400; 
+  line-height: 140%; 
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 
+h5 {
+  margin: 0;
+} */
+
 .bg-primary {
-  background-color: #114c5f!important;
+  background-color: #114c5f;
 }
 
 .service-icon {
@@ -55,20 +74,49 @@ h5 {
   margin-left: 4rem;
 }
 
-.parent-page footer .container p {
+footer.footer {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/footer.jpg");
+  background-position: center;
+  background-size: contain;
+}
+
+footer .content-section h2 { /* Footer headline */
+  color: white;
+}
+
+.parent-page footer .container p { /* MQ */
   margin-bottom: 0em;
+  color: dimgray;
 }
 
 @media (min-width: 900px) {
-  #lovedata {
+  #lovedata { /* So that love-data text doesn't overlap buttons in thumbnail image */
     margin-right: 2rem;
   }
-  .parent-page footer .container p {
-  margin-bottom: -4em;
+  .parent-page .footer { /* Footer height */
+    height: 40em;
   }
+  .parent-page footer .container { /* Aligns copyright text with grass strip */
+    margin-bottom: 5.35em;
+  }
+  .masthead h1 { /* To keep header text above horizon line */
+    margin-top: -0.4em;
+  }
+  header h4 { /* To keep header buttons under horizon line */
+    margin-bottom: 5em;
+  }
+  #rightmargin {
+    margin-right: 10px; /* For marketing-research button in header */
+  }
+  .parent-masthead {
+    height: 20rem;
+  }
+  .masthead {
+    padding-bottom: 10rem;
+  } 
 }
 
-/* Portfolio Pages */
+/* Portfolio Pages, General */
 
 section.portfolio-page img { /* Limits styling to only sections given the class "portfolio page" */
   display: block; /* Forces a line break between each image */
@@ -76,69 +124,17 @@ section.portfolio-page img { /* Limits styling to only sections given the class 
   margin: 0;
 }
 
-section.portfolio-page img:first-child { /* Limits styling to only sections given the class "portfolio page" */
+section.portfolio-page img:first-child {
   margin-top: 2.4rem;
 }
 
-@media (min-width: 600px) { /* Limits styling to tablets and desktops only */
+@media (min-width: 900px) {
   .sticky-div {
     position: sticky!important; /* Makes portfolio text stay fixed while images scroll */
     top: 0;
-  }
-}
-
-@media (min-width: 900px) {  /* Limits styling to large screens */
-  .sticky-div {
-    position: sticky!important; /*Makes portfolio text stay fixed while images scroll */
     text-align: left;
-    top: 0;
-  }
-} 
-
-@media (min-width: 900px) { /* Limits styling to large screens */
-  #rightmargin {
-    margin-right: 10px; /*for marketing-research button in header*/
-  }
-  .parent-masthead {
-    height: 20rem;
-  }
-  .masthead {
-    padding-bottom: 28rem;
   }
 }
-
-/* Header */
-
-@media (min-width: 500px) { /* Limits styling to large screens */
-  .color-bar {
-    margin-bottom: 1em!important; 
-  }
-}
-
-.col-sm-6 { /*test this out/possibly delete*/
-  margin:0;
-  padding:0;
-}
-
-.color-bar {
-  height: 9em;
-  margin-bottom: 8em; 
-  padding-left: 0;
-  padding-top: 3rem;
-  z-index: 5;
-  width: 95%;
-}
-
-section.portfolio-page h1 {
-  padding-bottom: 1em;
-  padding-top: 1.5em; 
-  padding-left: 1.6em;
-  padding-right: 0;
-  text-align: left;
-  background-color: turquoise;
-}
-
-/* Sticky*/
 
 .stickytitle
 .stickytext
@@ -148,7 +144,7 @@ section.portfolio-page h1 {
 
 .stickytitle {
   top: 0;
-  background-color: white; /*makes text disappear after scrolling under title*/
+  background-color: white; /* Makes text disappear after scrolling under title */
 }
 
 .stickytext {
@@ -160,12 +156,43 @@ section.portfolio-page h1 {
   margin-top: 5em;
 }
 
-/* Body text*/
+/* Portfolio Pages, Header */
+
+.col-sm-6 { /* Removes side margins from color bar */
+  margin: 0;
+  padding: 0;
+}
+
+.color-bar { /* MQ */
+  height: 9em;
+  margin-bottom: 8em; 
+  padding-top: 3rem;
+  z-index: 5;
+  width: 95%;
+}
+
+#love-data-bar { /* For some reason, the love data mobile text was pushed too far down */
+  margin-bottom: 5em;
+}
+
+section.portfolio-page h1 {
+  padding-bottom: 1em;
+  padding-top: 1.5em; 
+  padding-left: 1.6em;
+  background-color: turquoise;
+}
+
+@media (min-width: 900px) {
+  .color-bar {
+    margin-bottom: 1em; 
+  }
+}
+
+/* Portfolio pages, Body text */
 
 section.portfolio-page p {
   padding-left: 4em;
   width: 85%;
-  text-justify: left;
 }
 
 section.portfolio-page .sticky-div > p:first-child {
@@ -180,94 +207,82 @@ section.portfolio-page .sticky-div > p:first-child {
   font-weight: 700;
 }
 
-@media (min-width: 992px) {
-  .masthead {
-    height: 10vh;
-  }
+/* Portfolio Pages, Footer */
+
+.color-bar-footer { /* Color bar */
+  background-color: turquoise;
+  margin: auto;
+  margin-top: 3em;
+  padding-right: 0px;
+  padding-top: 2em;
+  padding-bottom: 0.8em;
 }
 
-/*Footer*/
-
-.offset-lg-4 { /*margin of buttons*/
-  margin-top: 1.3em;
-  margin-bottom: 1.1em;
+.portfolio-page .btn { /* Buttons, MQ */
+  display: block;
+  text-transform: uppercase;
+  padding: 0.8rem 0.8rem;
+  width: 14em;
+  height: 35%;
+  margin: auto; /* Keeps buttons centered */
+  font-size: 1.2rem;
 }
 
-footer p { /*bottom margin of circa text*/
-  margin-bottom: 5em;
-}
-
-.portfolio-item .caption .caption-content h5 { /*thumbnail text*/
+.portfolio-item .caption .caption-content h5 { /* Thumbnail text, MQ */
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0.6em;
 }
 
-.portfolio-page .btn { /*button*/
-  display: block;
-  text-transform: uppercase;
-  padding: 0.8rem 0.8rem;
-  width: 14em;
-  height: 35%;
-  margin: auto;
-  font-size: 1.2rem;
+.col-lg-2 { /* Thumbnail top margin, MQ */
+  margin-top: 1.7em;
 }
 
-.col-lg-2 { /*thumbnail margins*/
-  margin-top: 1em;
+footer p { /* Circa text margin, MQ */
+  margin-bottom: 4em;
+  margin-top: 1.5em;
 }
 
-@media (min-width: 900px) { /*for footer thumbnails, text, buttons*/
-  .offset-lg-4 { /*margin of buttons*/
-    margin-bottom: 0;
-  }
-  footer .col-lg-2 { /*maintains margin between thumbnails*/
-    margin-left: 1em;
-    height: 10rem;
-  }
-  footer .no-gutters { /*left margin for thumbnails*/
-    margin-left: 2.7em;
-  }
-  .col-lg-2 { /*thumbnail margins*/
-    margin-top: 0;
-  }
-  .offset-lg-4 { /*top margin of buttons*/
-    margin-top: 0.5em;;
-  }
-  .portfolio-page .btn { /*buttons*/
-    width: 100%;
-    height: 30%;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    margin-left: 7em;
-    margin-bottom: 0.7em!important;
-  }
-  .portfolio-item .caption .caption-content h5 { /*thumbnail text*/
-    font-size: 1.1rem;
-    margin-bottom: 0.4em;
-    margin-left: 0.3em;
-  }
-  .portfolio-page .btn .caption .caption-content { /*button text*/
-    font-size: 3rem;
-  }
-  .portfolio-page footer p { /*bottom margin of circa text*/
-    margin-bottom: 0em;
-  }
-}
-
-.color-bar-footer {
-  background-color: turquoise;
-  margin-top: 4em;
-  margin-left: 0em;
-  margin-right:0;
-  padding-right: 0px;
-  padding-top: 2em;
-  padding-bottom: 0.8em;
-}
-
-.portfolio-page footer .portfolio-item .caption .caption-content { /*circa text*/
+.portfolio-page footer .portfolio-item .caption .caption-content { /* Circa text */
   color: #fff;
   margin: auto 2rem 2rem;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .portfolio-page .btn { /* Buttons */
+    padding: 0.5em 0.5em;
+    width: 100%; /* Prevents them from being 14em wide */
+    height: 30%;
+    margin-left: 5.5em;
+    margin-bottom: 0.7em!important; /* In-between margin */
+  }
+  .offset-lg-4 { /* Margin of buttons */
+    margin-bottom: -1em;
+    margin-top: 0.1em;
+  }
+  .portfolio-page .btn .caption .caption-content { /* Button text */
+    font-size: 3rem;
+  }
+  .portfolio-item .caption .caption-content h5 { /* Thumbnail text */
+    font-size: 1.1rem;
+    margin-bottom: 0.4em;
+    margin-left: 0.3em;
+    font-weight: 700;
+  }
+  footer .col-lg-2 { /* Margin between thumbnails */
+    margin-left: 1em;
+    height: 10rem;
+  }
+  footer .no-gutters { /* Left margin of entire thumbnail row */
+    margin-left: 2.7em;
+  }
+  .col-lg-2 { /* Thumbnail top margin */
+    margin-top: 0;
+  }
+  .portfolio-page footer p { /* Circa text margin*/
+    margin-bottom: 0em;
+    margin-top: 0;
+  }
 }
