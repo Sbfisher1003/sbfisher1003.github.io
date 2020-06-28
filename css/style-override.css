@@ -4,7 +4,7 @@
 .masthead { /* MQ */
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Header_Mobile.jpg");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .masthead h1 {
@@ -34,6 +34,28 @@ header h4 { /* MQ */
   line-height: 1.5em;
   color: #343a40;
   font-weight: 400;
+  text-shadow: 1px 1px 60px black !important;
+}
+
+.masthead .btn-outline-dark { /* White background for masthead buttons */
+  background-color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+.masthead .btn-outline-dark:hover { /* Hovering over masthead buttons */
+  color: white;
+  background-color: #343a40;
+}
+
+.footer .btn-outline-dark { /* White background and border thickness for footer buttons */
+  background-color: rgba(255, 255, 255, 0.7);
+  border-width: 2px;
+  border-color: #343a40;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.2em;
+  padding-right: 2.2em;
 }
 
 /* for the extra phrases that have been commented out of html
@@ -48,12 +70,32 @@ h5 {
   margin: 0;
 } */
 
-.bg-primary {
-  background-color: #114c5f;
+.bg-primary { /* Color of sections */
+  background-color: #613630;
+  background: linear-gradient(180deg, rgba(77,43,38,1) 0%, rgba(97,54,48,1) 35%, rgba(128,94,89,1) 100%) !important;
 }
 
-.service-icon {
-  color: #114c5f;
+.service-icon { /* Icon color */
+  color: #a9b43e;
+}
+
+#researchwritingsub { /* Research/Writing subhead color */
+  color: #555B20 !important; 
+}
+
+a { /* Vew PDF color */
+  color: #555B20;
+}
+
+#services p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.portfolio-item:hover .caption { /* Color of hovering over portfolio items */
+  background-color: #613630;
+  -webkit-clip-path: inset(2rem);
+  clip-path: inset(2rem);
 }
 
 .portfolio-item .caption {
@@ -81,7 +123,7 @@ h5 {
 footer.footer { /* MQ */
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Footer_Mobile.jpg");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   height: 38em;
 }
 
@@ -89,9 +131,20 @@ footer .content-section h2 { /* Footer headline */
   color: white;
 }
 
+footer .content-section .container .btn-outline-dark { /* Footer buttons */
+  margin: 0 0 48 0;
+}
+
+footer .btn-outline-dark:hover { /* Hovering over footer buttons */
+  color: white;
+  background-color: #343a40;
+}
+
 .parent-page footer .container p { /* MQ */
   margin-bottom: 0em;
   margin-top: 5em;
+  margin-left: 40px;
+  margin-right: 40px;
   color: dimgray;
 }
 
@@ -99,7 +152,7 @@ footer .content-section h2 { /* Footer headline */
   .masthead { /* Horizontal photo */
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/Header.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
   }
   .masthead h1 {
     margin-top: 0em;
@@ -109,15 +162,17 @@ footer .content-section h2 { /* Footer headline */
     margin-bottom: 2em;
     color: white;
     font-weight: 500;
+    text-shadow: -3px -3px 15px black !important;
+  }
+  .masthead .btn {
+    margin-top: 1.7em;
+    color: #343a40;
   }
   #lovedata { /* So that love-data text doesn't overlap buttons in thumbnail image */
     margin-right: 2rem;
   }
   .parent-page .footer { /* Footer height */
     height: 40em;
-  }
-  .parent-page footer .container { /* Aligns copyright text with grass strip */
-    margin-bottom: 5.35em;
   }
   .masthead h1 { /* To keep header text above horizon line */
     margin-top: -0.4em;
@@ -137,12 +192,12 @@ footer .content-section h2 { /* Footer headline */
   footer.footer {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/footer.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     height: 100%;
   }
   .parent-page footer .container p {
     margin-top: 1.7em;
-    color: dimgray;
+    color: oldlace;
   }
 }
 
@@ -209,7 +264,7 @@ section.portfolio-page h1 {
   padding-bottom: 1em;
   padding-top: 1.5em; 
   padding-left: 1.6em;
-  background-color: turquoise;
+  background-color: #a9b43e;
 }
 
 @media (min-width: 900px) {
@@ -240,7 +295,7 @@ section.portfolio-page .sticky-div > p:first-child {
 /* Portfolio Pages, Footer */
 
 .color-bar-footer { /* Color bar */
-  background-color: turquoise;
+  background-color: #a9b43e;
   margin: auto;
   margin-top: 3em;
   padding-right: 0px;
